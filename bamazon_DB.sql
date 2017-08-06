@@ -14,34 +14,34 @@ CREATE TABLE products(
 );
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Yoga Mat", "Fitness", "19.99", "25");
+VALUES ("Yoga Mat", "Fitness", "25", "25");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Shake Weight", "Fitness", "20", "99");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Fitness Ball", "Fitness", "25.99", "10");
+VALUES ("Fitness Ball", "Fitness", "24", "10");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("5 LB Free Weights - Set/2", "Fitness", "24.99", "50");
+VALUES ("5 LB Free Weights - Set/2", "Fitness", "16", "50");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Baby Doll", "Toys", "16.99", "16");
+VALUES ("Baby Doll", "Toys", "15", "16");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Malibu Barbie", "Toys", "12.99", "19");
+VALUES ("Malibu Barbie", "Toys", "12", "19");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Malibu Ken", "Toys", "12.99", "99");
+VALUES ("Malibu Ken", "Toys", "12", "99");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Star Wars Lego Set", "Toys", "49.99", "8");
+VALUES ("Star Wars Lego Set", "Toys", "50", "8");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Checkers", "Games", "15.99", "29");
+VALUES ("Checkers", "Games", "15", "29");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Sushi Go Party Set", "Games", "24.99", "23");
+VALUES ("Sushi Go Party Set", "Games", "25", "23");
 
 
 
