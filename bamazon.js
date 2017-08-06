@@ -26,7 +26,7 @@ start();
 //   })
 
 // performs inital query of Products table from database
-var start = function() {
+var start = function(a) {
     connection.query('SELECT * FROM products', function(err, res) {
         console.log(' ');
         console.log('**************************************************************************************');
@@ -44,5 +44,64 @@ var start = function() {
             table.push(productArray);
         }
         console.log(table.toString());
+        purchaseItem();
         });
     };
+// Shopping prompt to purchase items
+
+var purchaseItem = function() {
+    inquirer.prompt([{
+        name: "Item",
+        type: "input",
+        message: "Choose the ID of the Item you would like to buy",
+        validate: function(value) {
+            //validates answer
+            if (isNaN(value) === false) {
+                return true;
+            } else {
+                console.log("\nYou did not enter a number. Please enter the item number of the product you wish to purchase.\n");
+                return false;
+            }
+        }
+    }, {
+      //Prompts the customer for the quantity
+        name: "Qty",
+        type: "input",
+        message: "How many would you like to purchase?",
+        validate: function(value) {
+            //validates answer
+            if (isNaN(value) === false) {
+                return true;
+            } else {
+                console.log("\nPlease enter a valid Quantity\n");
+                return false;
+            }
+        }
+        }]).then(function(answer) {
+            var ItemInt = parseInt(answer.Qty);
+                //Queries the database
+                connection.query("SELECT * FROM products WHERE ?", [{id: answer.Item}], function(err, data) { 
+                    if (err) throw err;
+                    //Checks if sufficient quantity exists
+                    if (data[0].stock_qty < ItemInt) {
+                       console.log("We're sorry, that Item is currently out of stock.\n");
+                       console.log("Please choose another product.\n");
+                       purchaseItem(); 
+                    } else {
+                        //if quantity exists updates database
+                        var updateQty = data[0].stock_qty - ItemInt;
+                        var totalPrice = data[0].price * ItemInt;
+                        connection.query('UPDATE products SET stock_qty = ? WHERE id = ?', [updateQty, answer.Item], function(err, results) {
+                        if(err) {
+                            throw err;
+                        } else {
+                        console.log('Your purchase was successfull!\n');
+                        console.log('The total cost for your order is: $ ' + totalPrice);
+                        console.log('Thank you for shopping at Bamazon! Please return soon.')
+                        connection.end();
+                        }
+                      });
+                    }
+                });
+        })
+}
