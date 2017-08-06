@@ -11,29 +11,5 @@ var connection = mysql.createConnection({
 // Show connection and ID
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId + "\n");
-  createProduct();
+  console.log("connected as id " + connection.threadId);
 });
-
-// Function to add products
-function createProduct() {
-  console.log("Inserting a new product...\n");
-  var query = connection.query(
-    "INSERT INTO products SET ?",
-    {
-        product_name: 'Shake Weight',
-        department_name: 'Fitness',
-        price: 19.99,
-        stock_qty: 99
-    },
-  );
-
-  // logs the actual query being run
-  console.log(query.sql);
-};
-
-  
-
-    
-
-    
