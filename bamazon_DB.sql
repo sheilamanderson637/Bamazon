@@ -20,28 +20,28 @@ INSERT INTO products (product_name, department_name, price, stock_qty)
 VALUES ("Shake Weight", "Fitness", "18.99", "99");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Fitness Ball", "Fitness", "25.99", "10");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("5 LB Free Weights - Set/2", "Fitness", "24.99", "50");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Baby Doll", "Toys", "16.99", "16");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Malibu Barbie", "Toys", "12.99", "19");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Malibu Ken", "Toys", "12.99", "99");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Star Wars Lego Set", "Toys", "49.99", "8");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Checkers", "Games", "15.99", "29");
 
 INSERT INTO products (product_name, department_name, price, stock_qty)
-VALUES ("Shake Weight", "Fitness", "18.99", "99");
+VALUES ("Sushi Go Party Set", "Games", "24.99", "23");
 
 
 
