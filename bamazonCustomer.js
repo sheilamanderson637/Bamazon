@@ -40,7 +40,7 @@ var start = function(a) {
 // New Table to format returned sql data
             var table = new Table({
                 head: ['Item ID #', 'Product Name', 'Department Name', 'Price', 'Quantity'],
-                colWidths: [10, 40, 10, 10, 10]
+                colWidths: [10, 40, 20, 10, 10]
             });
         for (var i=0; i < res.length; i++) {
             var productArray = [res[i].id, res[i].product_name, res[i].department_name, res[i].price, res[i].stock_qty];
